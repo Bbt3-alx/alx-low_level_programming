@@ -5,8 +5,9 @@
 
 /* betty style doc for function main goes there */
 /**
- * Fumction_main - The program starter point
-*/
+ * main - The program starter point
+ * Return: This function will the value of a randon number
+ */
 int main(void)
 {
 	int n;

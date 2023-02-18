@@ -14,8 +14,10 @@ int main(void)
 	for (lower_al = 'a'; lower_al <= 'z'; lower_al++)
 	{
 		putchar(lower_al);
-		upper_al = lower_al;
-		putchar(toupper(upper_al));
+	}
+	for (upper_al = 'A'; upper_al <= 'Z'; upper_al++)
+	{
+		putchar(upper_al);
 	}
 	putchar('\n');
 	return (0);

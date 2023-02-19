@@ -1,13 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h> 
+#include <stdlib.h>
 
 /**
- **main - the program starter point
- **Return: The program end point
- **/ 
+ *main - the program starter point
+ *Return: The program end point
+*/
 
 int main(void)
 {
-	printf("%du %cu %fu  \n", 10, "dix", "1.0");
+	int myInt;
+	char myChar;
+	double myDouble;
+
+	printf("%lu %lu %lu \n", (unsigned long) sizeof(myInt), (unsigned long) sizeof(myChar), (unsigned long) sizeof(myDouble));
 	return (0);
 }

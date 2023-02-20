@@ -12,6 +12,8 @@ int main(void)
 	char myChar;
 	double myDouble;
 
-	printf("%lu %lu %lu \n", (unsigned long) sizeof(myInt), (unsigned long) sizeof(myChar), (unsigned long) sizeof(myDouble));
+	printf("%lu\n", (unsigned long) sizeof(myInt));
+	printf("%lu\n", (unsigned long) sizeof(myChar));
+	printf("%lu\n", (unsigned long) sizeof(myDouble));
 	return (0);
 }

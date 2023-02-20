@@ -12,8 +12,8 @@ int main(void)
 	char myChar;
 	double myDouble;
 
-	printf("%lu\n", (unsigned long) sizeof(myInt));
-	printf("%lu\n", (unsigned long) sizeof(myChar));
-	printf("%lu\n", (unsigned long) sizeof(myDouble));
+	printf("Size of a char: %lu byte(s)\n", (unsigned long) sizeof(myInt));
+	printf("Size of a char: %lu byte(s\n", (unsigned long) sizeof(myChar));
+	printf("Size of a char: %lu byte(s)\n", (unsigned long) sizeof(myDouble));
 	return (0);
 }

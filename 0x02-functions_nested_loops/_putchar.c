@@ -26,4 +26,23 @@ void print_alphabet(void)
 	{
 		putchar(i);
 	}
+
+}
+
+void print_alphabet_x10(void)
+{
+	int i, alpha_time;
+
+	alpha_time = 0;
+	while (alpha_time <=10)
+	{	
+		i = 'a';
+		while (i<='z')
+		{
+			putchar(i);
+		i++;
+		}
+
+	alpha_time++;
+	}
 }

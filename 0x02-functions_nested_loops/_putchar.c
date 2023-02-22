@@ -8,7 +8,7 @@
  * On error, -1 i sreturned
  */
 
-void _putchar(char *p)
+void _putchar(char* p[])
 {
 	putchar(p);
 }

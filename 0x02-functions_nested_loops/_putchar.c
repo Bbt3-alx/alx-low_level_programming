@@ -10,5 +10,10 @@
 
 void _putchar(char* p[])
 {
-	putchar(p);
+	int c = strlen(p);
+	int i = 0;
+	for (i=0; i<=c; i++)
+	{
+		putchar(p[i]);
+	}
 }

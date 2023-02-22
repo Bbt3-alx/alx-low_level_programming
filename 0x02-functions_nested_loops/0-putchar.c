@@ -8,9 +8,7 @@
 
 int main(void)
 {
-	char *p = "_putchar";
-
-	putchar(*p);
-
+	#include "main.h"
+	_putchar("_putchar");
 	return (0);
 }

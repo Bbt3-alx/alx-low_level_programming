@@ -33,7 +33,7 @@ void print_alphabet_x10(void)
 {
 	int i, alpha_time;
 
-	alpha_time = 0;
+	alpha_time = 1;
 	while (alpha_time <=10)
 	{	
 		i = 'a';
@@ -44,5 +44,6 @@ void print_alphabet_x10(void)
 		}
 
 	alpha_time++;
+	putchar('\n');
 	}
 }

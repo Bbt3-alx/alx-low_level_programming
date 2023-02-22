@@ -9,11 +9,11 @@
  * On error, -1 i sreturned
  */
 
-void _putchar(char p)
+void _putchar(char p[])
 {
-	int c = strlen(p);
-	int i = 0;
-	for (i=0; i<=c; i++)
+	int i;
+	int strp = strlen(p);
+	for (i=0; i<=strp; i++)
 	{
 		putchar(p[i]);
 	}

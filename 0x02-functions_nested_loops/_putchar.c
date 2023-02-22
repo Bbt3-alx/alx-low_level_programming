@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 /**
  *_putchar - print the string '_putchar' to stdout
@@ -8,7 +9,7 @@
  * On error, -1 i sreturned
  */
 
-void _putchar(char* p[])
+void _putchar(char p)
 {
 	int c = strlen(p);
 	int i = 0;

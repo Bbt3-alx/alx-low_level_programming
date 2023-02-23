@@ -1,6 +1,6 @@
-#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
 
 /**
  *_putchar - print the string '_putchar' to stdout
@@ -9,14 +9,9 @@
  * On error, -1 i sreturned
  */
 
-void _putchar(char p[])
+int _putchar(char c)
 {
-	int i;
-	int strp = strlen(p);
-	for (i=0; i<=strp; i++)
-	{
-		putchar(p[i]);
-	}
+	return (write(1, &c, 1));
 }
 
 void print_alphabet(void)
@@ -45,5 +40,17 @@ void print_alphabet_x10(void)
 
 	alpha_time++;
 	putchar('\n');
+	}
+}
+
+int _islower(int c)
+{
+	if (_islower(c))
+	{
+		return (0);
+	}
+	else
+	{
+		return (0);
 	}
 }

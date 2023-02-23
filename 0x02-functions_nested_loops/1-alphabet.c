@@ -2,13 +2,19 @@
 #include "main.h"
 
 /**
- * main - this program  prints the alphabet, in lowercase
+ * print_alphabet - this program  prints the alphabet, in lowercase
  *
  * Return: It will return 0
  */
 
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	int alphabet;
+
+	alphabet = 'a';
+	while (alphabet <= 'z')
+	{
+		_putchar(alphabet);
+		alphabet++;
+	}
 }

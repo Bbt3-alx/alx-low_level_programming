@@ -6,9 +6,18 @@
  *
  * Return: always 0.
  */
-int main(void)
+void print_alphabet_x10(void)
 {
-	print_alphabet_x10();
-	return (0);
+	int i, alpha_time;
+	alpha_time = 1;
+	for (alpha_time=0; alpha_time<=10; alpha_time++)
+	{
+		for (i='a'; i<='z'; i++)
+		{
+			_putchar(i);
+		}
+	
+	_putchar('\n');
+	}
 }
 

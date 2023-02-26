@@ -2,12 +2,14 @@
 #include <ctype.h>
 /**
  * _isupper - will check if upper or not
+ * @c: value to be check.
  * Return: 1 is c is upper, 0 else
  */
 
 int _isupper(int c)
 {
 	int ch;
+
 	ch = isupper(c);
 	if (ch)
 	{

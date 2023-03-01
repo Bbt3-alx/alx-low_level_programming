@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "main.h"
 
 /**
  * puts2 - print string
@@ -17,8 +18,8 @@ void puts2(char *str)
 	{
 		if (i % 2 == 0)
 		{
-			putchar(str[i]);
+			_putchar(str[i]);
 		}
 	}
-	putchar('\n');
+	_putchar('\n');
 }

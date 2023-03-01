@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "main.h"
 
 /**
  * print_rev - that function prints a string, in reverse,
@@ -8,20 +9,15 @@
  */
 void print_rev(char *s)
 {
-	int lon = 0;
+	int i = 0;
 
-	int o;
-
-	while (*s != '\n')
+	while (s[i])
 	{
-		lon++;
-		s++;
+		i++;
 	}
-	s--;
-	for (o = lon; o > 0; o--)
+	while (i--)
 	{
-		putchar(*s);
-		s++;
+		_putchar(s[i]);
 	}
-	putchar('\n');
+	_putchar('\n');
 }

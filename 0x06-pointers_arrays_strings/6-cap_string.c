@@ -9,7 +9,7 @@
 char *cap_string(char *str)
 {
 	int i;
-	char ch[] = " ;,.!?\"(){}";
+	char ch[] = " ;,.?\"(){}";
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -27,6 +27,10 @@ char *cap_string(char *str)
 		if ((str[i] == '\n') || (str[i] == '\t'))
 		{
 			str[i + 1] = toupper(str[i + 1]);
+		}
+		else if ((str[i] == '!') && (str[! + 1] == ' '))
+		{
+			str[i + 2] = toupper(str[i + 2]);
 		}
 		continue;
 	}

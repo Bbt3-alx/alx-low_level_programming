@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 /**
  * print_chessboard - this function prints the checcboard.
@@ -20,7 +19,6 @@ void print_chessboard(char (*a)[8])
 		{
 			printf("\n");
 		}
-		
+		continue;	
 	}
-	printf("\n");
 }

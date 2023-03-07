@@ -10,17 +10,15 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	int i, size;
+	char *a;
 
-	size = strlen(s);
-
-	for (i = 0; i <= size; i++)
+	a = strpbrk(s, accept);
+	if (a != NULL)
 	{
-		if (s[i] == accept[i])
-		{
-			return (s);
-		}
-		continue;
+		return (a);
 	}
-	return (NULL);
+	else
+	{
+		return (NULL);
+	}
 }

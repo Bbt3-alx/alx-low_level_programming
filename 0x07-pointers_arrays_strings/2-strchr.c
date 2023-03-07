@@ -23,5 +23,6 @@ char *_strchr(char *s, char c)
 		}
 		continue;
 	}
+	putchar('\n');
 	return (NULL);
 }

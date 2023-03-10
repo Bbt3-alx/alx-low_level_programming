@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <math.h>
-#include <stdlib.h>
 
 /**
  * _pow_recursion - function that returns the value of:
@@ -11,12 +9,13 @@
  */
 int _pow_recursion(int x, int y)
 {
-	int po;
-
-	po = pow(x, y);
 	if (y < 0)
 	{
 		return (-1);
 	}
-	return (po);
+	if (y == 0)
+	{
+		return (1);
+	}
+	return (x * _pow_recursion(x, y-1));
 }

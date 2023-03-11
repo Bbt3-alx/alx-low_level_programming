@@ -7,16 +7,6 @@
  */
 int _isalpha(int c)
 {
-	int i;
-
-	for (i = 0; i < strlen(c); i++)
-	{
-		if (isalpha(c[i]))
-		{
-			putchar(c[i]);
-		}
-		printf("%c: is not alpha\n", c[i]);
-	}
-	return (0);
+	return (c);
 }
 			

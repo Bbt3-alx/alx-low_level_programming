@@ -7,15 +7,5 @@
  */
 int _isupper(int c)
 {
-	int i = 0;
-
-	for (i = 0; i < strlen([c]); i++)
-	{
-		if (isupper(c[i]))
-		{
-			putchar(c[i]);
-		}
-		continue;
-	}
-	return (0);
+	return (c);
 }

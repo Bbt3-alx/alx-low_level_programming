@@ -9,16 +9,5 @@
  */
 int _islower(char c)
 {
-	int i = 0;
-
-	for (i = 0; i < strlen(c); i++)
-	{
-		if (isupper(c[i]))
-		{
-			c[i] = tolower(c[i]);
-		}
-		continue;
-	}
-	putchar('\n');
-	return (0);
+	return (c);
 }

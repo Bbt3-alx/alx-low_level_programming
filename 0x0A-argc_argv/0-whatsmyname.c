@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * argcArgv - This function prints its name, followed by a new line.
+ * main - This function prints its name, followed by a new line.
  * @argc: The lenght of the argument in function.
  * @argv: The argument vector
  * Return: An int.

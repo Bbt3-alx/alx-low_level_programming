@@ -17,12 +17,11 @@ int main(int argc, char **argv)
 	{
 		int x = strtol(argv[i], NULL, 10);
 
-
-		result = result * x;
+		result *= x;
 	}
 	if (argc == 1)
 	{
-		printf("Error\n");
+		puts("Error");
 		return (1);
 	}
 	printf("%d\n", result);

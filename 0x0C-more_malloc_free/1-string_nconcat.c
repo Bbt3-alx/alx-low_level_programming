@@ -6,6 +6,7 @@
  * string_nconcat - This function concatenate two strings
  * @s1: The first string
  * @s2: The second string
+ * @n: The number of byte of s2 to be concatenate to s1.
  * Return: A char pointer.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -15,7 +16,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i;
 
 	/* Allocate the required memory space for concatenation. */
-	str_cat = malloc(strlen(s1) + n +1);
+	str_cat = malloc(strlen(s1) + n + 1);
 	/* Verify if the allocation is done. */
 	if (str_cat == NULL)
 	{
@@ -24,6 +25,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	strcpy(str_cat, s1);
 	len = strlen(str_cat);
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
 	for (i = 0; i < n && s2[i] != '\0'; i++)
 	{
 		str_cat[len + i] = s2[i];

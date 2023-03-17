@@ -11,18 +11,23 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str_cat;
-	int s1len, s2len, count;
+	size_t len;
+	unsigned int i;
 
-	s1len = strlen(s1);
-	s2len = strnlen(s2, n);
-	count = s1len + s2len;
-	str_cat = malloc(count);
+	/* Allocate the required memory space for concatenation. */
+	str_cat = malloc(strlen(s1) + n +1);
+	/* Verify if the allocation is done. */
 	if (str_cat == NULL)
 	{
 		printf("Impossible to allocate memory");
 		return (NULL);
 	}
 	strcpy(str_cat, s1);
-	strncat(str_cat, s2, n);
+	len = strlen(str_cat);
+	for (i = 0; i < n && s2[i] != '\0'; i++)
+	{
+		str_cat[len + i] = s2[i];
+	}
+	str_cat[len + i] = '\0';
 	return (str_cat);
 }

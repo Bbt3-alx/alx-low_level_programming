@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 /**
- * Write a program that prints all possible combinations of single-digit numbers.
+ * main - Write a program that prints all possible combinations
+ * of single-digit numbers.
  * Return: Integers.
  */
 int main(void)
@@ -18,7 +19,6 @@ int main(void)
 			putchar(',');
 			putchar(' ');
 		}
-		
 	}
 	putchar('\n');
 	return (0);

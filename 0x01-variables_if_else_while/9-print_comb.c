@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 /**
- * main - Write a program that prints all possible combinations
+ * Write a program that prints all possible combinations
  * of single-digit numbers.
  * Return: Integers.
  */
 int main(void)
 {
-	char number;
+	int number;
 
 	for (number = '0'; number <= '9'; number++)
 	{

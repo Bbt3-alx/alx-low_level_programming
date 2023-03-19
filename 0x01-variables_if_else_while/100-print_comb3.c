@@ -6,17 +6,18 @@
  */
 int main(void)
 {
-	int i, number;
+	int i, j;
+	int fix = '1';
 
 	for (i = '0'; i < '9'; i++)
 	{
-		for (number = '1'; number <= '9'; number++)
+		for (j = fix; j <= '9'; j++)
 		{
-			if (i != number)
+			if (i != j)
 			{
 				putchar(i);
-				putchar(number);
-				if (!(i == '8' && number == '9'))
+				putchar(j);
+				if (!(i == '8' && j == '9'))
 				{
 					putchar(',');
 					putchar(' ');
@@ -27,6 +28,8 @@ int main(void)
 				continue;
 			}
 		}
+
+		fix++;;
 	}
 	putchar('\n');
 	return (0);

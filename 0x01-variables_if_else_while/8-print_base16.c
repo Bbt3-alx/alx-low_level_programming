@@ -6,16 +6,18 @@
  */
 int main(void)
 {
-	char num, hex;
+	int  num;
+	char alpha;
 
 	for (num = '0'; num <= '9'; num++)
 	{
 		putchar(num);
 	}
-	for (hex = 'A'; hex <= 'F'; hex++)
+	for (alpha = 'a'; alpha <= 'f'; alpha++)
 	{
-		putchar(hex);
+		putchar(alpha);
 	}
+
 	putchar('\n');
 	return (0);
 }

@@ -4,14 +4,14 @@
  * int_index - function that searches for an integer.
  * @array: The array of integer.
  * @size: size of the array.
- * @cpm: function to cpm 2 element in the array.
+ * @cmp: function to cpm 2 element in the array.
  * Return: An integer the index in the array.
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i, j;
 
-	if (size <= 0 || cmp == NULL)
+	if (array == NULL || cmp == NULL)
 	{
 		return (-1);
 	}
@@ -19,18 +19,13 @@ int int_index(int *array, int size, int (*cmp)(int))
 	{
 		for (j = 0; j < i; j++)
 		{
-			if (cmp(array[j]))
+			if (cmp(array[i]))
 			{
 				return (i);
 			}
-			if (!(cmp(array[j] && j)))
-			{
-				continue;
-			}
 			else
-			return (0);
+			continue;
 		}
 	}
-	return (-1);
+	return (0);
 }
-		

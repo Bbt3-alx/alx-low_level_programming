@@ -20,11 +20,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 		if (separator == NULL)
 		{
-			printf("%d ", p);
+			printf("%d", p);
 		}
 		if (i == n)
 		{
-			printf("%d ", p);
+			printf("%d", p);
 		}
 		else
 		{

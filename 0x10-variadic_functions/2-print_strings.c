@@ -17,15 +17,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		char *p = va_arg(ap, char *);
 
-		if (p == NULL)
-		{
-			printf("%p", NULL);
-		}
-		else if ((i == 0) || (separator == NULL))
-		{
-			printf("%s", p);
-		}
-		else
+		printf("%s", p);
+		if ((p != NULL) && (separator != NULL))
 		{
 			printf("%s%s", separator, p);
 		}

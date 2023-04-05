@@ -7,6 +7,11 @@
  */
 void free_listint2(listint_t **head)
 {
+	if (*head == NULL)
+	{
+		printf("%p\n", NULL);
+		return;
+	}
 	while ((*head)->next != NULL)
 	{
 		free(*head);

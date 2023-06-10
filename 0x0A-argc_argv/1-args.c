@@ -7,12 +7,21 @@
  * @argv: Thw argument vector
  * Return: An integer of the number of argument passed to the function
  */
-int main(int argc, char **argv)
+int main(int argc, __attribute__((unused)) char **argv)
 {
-	if (argv)
-		printf("%d\n", argc);
+	int i;
+	int sum = 0;
+
+	if (argc > 1)
+	{
+		for (i = 1; i < argc; i++)
+		{
+			sum += 1;
+		}
+		printf("%d\n", sum);
+	}
 	else
-		printf("No argument provided");
+		printf("%d\n", 0 );
 
 	return (0);
 }

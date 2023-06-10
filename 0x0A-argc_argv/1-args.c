@@ -21,7 +21,7 @@ int main(int argc, __attribute__((unused)) char **argv)
 		printf("%d\n", sum);
 	}
 	else
-		printf("%d\n", 0 );
+		printf("%d\n", 0);
 
 	return (0);
 }

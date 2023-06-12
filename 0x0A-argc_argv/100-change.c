@@ -16,22 +16,29 @@
 int main(int argc, char *argv[])
 {
 	int cent = 0;	/* create the variable cent and initilize it to 0 */
-	long unsigned int i;
+
+	long [unsigned] int i;
+
 	int amount;
-	int coin[] = {QUARTER, DIME, NICKEL, SECOND, PENNY};	/* Declare coin system as an array of ints */
-	
+
+	/* Declare coin system as an array of ints */
+	int coin[] = {QUARTER, DIME, NICKEL, SECOND, PENNY};
+
 	if (argc != 2 || argc == 1)	/* Check if the argument count is valid */
 	{
 		printf("Error\n");
-		
+
 		return (1);
 	}
 
 	amount  = atoi(argv[1]);	/* Convert the argument to an int */
 
-	/* Now we will loop throught the coin list to count the minumum number of coins to make change for an amount of money. */
+	/*
+	 * Now we will loop throught the coin list to count the minumum number
+	 * of coins to make change for an amount of money.
+	 */
 
-	for (i = 0; i < sizeof(coin)/sizeof(int); i++)
+	for (i = 0; i < sizeof(coin) / sizeof(int); i++)
 	{
 		while (amount >= coin[i])
 		{

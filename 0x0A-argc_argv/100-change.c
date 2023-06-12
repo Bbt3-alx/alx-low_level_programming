@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 {
 	int cent = 0;	/* create the variable cent and initilize it to 0 */
 
-	long [unsigned] int i;
+	unsigned long int i;
 
 	int amount;
 

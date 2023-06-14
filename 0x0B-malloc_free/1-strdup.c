@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 /**
  * _strdup - returns a pointer to a newly allocated space in memory.
  * @str: String to be copyed to the new space.
@@ -12,11 +12,7 @@ char *_strdup(char *str)
 	int i = 0;
 	char *new;
 
-	if (str == NULL)
-	{
-		return (NULL);
-	}
-	new = malloc(sizeof(str));
+	new = malloc(strlen(str) + 1);
 	if (new == NULL)
 	{
 		return (NULL);

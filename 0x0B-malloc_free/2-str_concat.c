@@ -8,18 +8,22 @@
  * @s2: String 2
  * Return:  newly allocated space in memory.
  */
- char *str_concat(char *s1, char *s2)
+char *str_concat(char *s1, char *s2)
 {
 	int i, j;
 	char *new_char;
-	int s1_len = strlen(s1);
-	int s2_len = strlen(s2);
+	int s1_len;
+	int s2_len;
 
 	if (s1 == NULL)
-	{
-		return (NULL);
-	}
-	
+		s1 = "";
+
+	else if (s2 == NULL)
+		s2 = "";
+
+	s1_len = strlen(s1);
+	s2_len = strlen(s2);
+
 	new_char = malloc(s1_len + s2_len + 1);
 	if (new_char == NULL)
 	{
@@ -30,7 +34,7 @@
 	while (s1[i] != '\0')
 	{
 		new_char[i] = s1[i];
-		i++;	
+		i++;
 	}
 	while (s2[j] != '\0')
 	{
@@ -39,8 +43,6 @@
 		j++;
 	}
 
-	new_char[i + 1] = '\0'; 
+	new_char[i + 1] = '\0';
 	return (new_char);
 }
-
-

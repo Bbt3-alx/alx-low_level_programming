@@ -10,7 +10,7 @@ int main(void)
 {
 	char *concat;
 
-	concat = string_nconcat("Best ", NULL);
+	concat = string_nconcat("Best ", "Best Schoo", 1);
 	printf("%s\n", concat);
 	free(concat);
 	return (0);

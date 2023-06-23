@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include <string.h>
 
 /**
  * print_numbers -  prints numbers, followed by a new line.
@@ -17,12 +18,14 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		nb = va_arg(arg_list, int);
-		if (separator != NULL)
+		if ( i < n - 1 && separator != NULL)
 			printf("%d%s", nb, separator);
 		else
 			printf("%d", nb);
 
 	}
 	printf("\n");
+
+	va_end(arg_list);
 }
 

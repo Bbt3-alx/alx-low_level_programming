@@ -1,7 +1,4 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-#include "list.h"
+#include "lists.h"
 
 int main(void)
 {

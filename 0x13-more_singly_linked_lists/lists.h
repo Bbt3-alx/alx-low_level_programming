@@ -2,6 +2,7 @@
 #define LISTS_H
 #include <stdio.h>
 #include <stdlib.h>
+#define UNUSED(X) X void
 /**
  * struct listint_s - singly linked list
  * @n: integer

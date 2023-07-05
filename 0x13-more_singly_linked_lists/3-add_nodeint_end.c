@@ -27,10 +27,9 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 		while (temp->next != NULL)
 		{
-			printf("%d\n", temp->n);
 			temp = temp->next;
 		}
-		*head = new;
+		temp->next = new;
 	}
 	return (new);
 }

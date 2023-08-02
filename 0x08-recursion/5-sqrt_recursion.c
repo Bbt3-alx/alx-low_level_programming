@@ -7,10 +7,10 @@
  */
  int _sqrt_recursion(int n)
  {
-	 int p = 0;
+	int p = 0;
 
-	 if (n/p != n)
+	if (n / p != n)
 		 return (-1);
 	p = n--;
-	 return (n * _sqrt_recursion(n - 1));
+	return (n * _sqrt_recursion(n - 1));
  }

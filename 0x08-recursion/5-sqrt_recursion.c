@@ -1,16 +1,29 @@
-#include "main.c"
+#include "main.h"
 
 /**
- * _sqrt_recursion - returns the natural square root of a number.
- * @n: The number which square will be returned.
- * Return: returns the natural square root of a number.
+ * His_perfect_square - helper function to check if x is a perfect square of n
+ * @n: The number for wich to verify the square root.
+ * Return: The natural square root or -1 it not found.
  */
- int _sqrt_recursion(int n)
- {
-	int p = 0;
+int is_perfect_square(int x, int n)
+{
+	if (x * x == n)
+		return (x);
+	if (x * x > n)
+		return (-1);
+	return (is_perfect_square(x + 1, n));
+}
 
-	if (n / p != n)
-		 return (-1);
-	p = n--;
-	return (n * _sqrt_recursion(n - 1));
- }
+/**
+ * _sqrt_recursion - Returns the natural square root of a number.
+ * @n: The number for which to find the square root.
+ * Return: The integer natural square root or -1 if not found.
+ */
+int _sqrt_recursion(int n)
+{
+/* Check for negative or zero input */
+if (n <= 0)
+return (-1);
+/* Call the helper function with initial value of 1 */
+return (is_perfect_square(1, n));
+}

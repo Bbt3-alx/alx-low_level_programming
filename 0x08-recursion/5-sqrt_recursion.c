@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * His_perfect_square - helper function to check if x is a perfect square of n
+ * is_perfect_square - helper function to check if x is a perfect square of n
  * @n: The number for wich to verify the square root.
+ * @x: The power of n
  * Return: The natural square root or -1 it not found.
  */
 int is_perfect_square(int x, int n)

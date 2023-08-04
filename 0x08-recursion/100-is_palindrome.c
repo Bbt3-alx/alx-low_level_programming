@@ -3,13 +3,14 @@
 /**
  * check_palindrome - Check if 's' is palindrom
  * @s: String be verified if palindrome or not.
+ * @len: The lenght of s.
  * Return: returns 1 if a string is a palindrome and 0 if not.
  */
 int check_palindrome(char *s, int len)
 {
 	if (len <= 1)
 		return (1);
-	
+
 	if (*s != s[len - 1])
 		return (0);
 

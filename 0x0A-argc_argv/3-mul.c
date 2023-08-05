@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <ctype.h>
 
 /**
  * main - check the code
@@ -11,12 +11,25 @@
 
 int main(int argc, char *argv[])
 {
-	int result = 0;
+	int result = 0, i, j;
 
-	if (argc > 3 || argc == 1)
+	if (argc != 3)
 	{
-		puts("Error");
+		printf("Error\n");
 		return (1);
+	}
+
+
+	for (i = 0; i < 2; i++)
+	{
+		for (j = 0; argv[i + 1][j] != '\0'; j++)
+		{
+			if (!isdigit(argv[i + 1][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
 	}
 
 	result = atoi(argv[1]) * atoi(argv[2]);

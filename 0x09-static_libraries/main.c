@@ -4,8 +4,8 @@
 
 /**
  * main - check the code
- * 
- * Reyurn: Always 0.
+ *
+ * Return: Always 0.
  */
 int main(void)
 {

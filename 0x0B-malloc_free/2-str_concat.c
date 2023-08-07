@@ -11,13 +11,14 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *new_s;
-	int j, i;
-	int new_len = strlen(s1) + strlen(s2) + 1;
+	int j, i, new_len;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+
+	new_len = strlen(s1) + strlen(s2) + 1;
 
 	new_s = (char *)malloc(new_len);
 

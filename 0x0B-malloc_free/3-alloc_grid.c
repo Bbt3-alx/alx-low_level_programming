@@ -29,20 +29,15 @@ int **alloc_grid(int width, int height)
 			/* If memory allocation fails for a row, */
 			/* free previously allocated memory and return NULL */
 			for (j = 0; j < i; j++)
+			{
 				free(grid[j]);
+			}
 			free(grid);
 			return (NULL);
 		}
 
 		for (j = 0; j < width; j++)
 		{
-			grid[j] = malloc(width * sizeof(int));
-			if (grid[j] == NULL)
-			{
-				free(grid[j]);
-				free(grid);
-				return (NULL);
-			}
 			grid[i][j] = 0;
 		}
 

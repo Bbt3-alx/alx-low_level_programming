@@ -23,7 +23,7 @@ int **alloc_grid(int width, int height)
 	/* Allocate memory for each row and initialize it */
 	for (i = 0; i < height; i++)
 	{
-		grid[i] = malloc(sizeof(width));
+		grid[i] = malloc(width * sizeof(int));
 		if (grid[i] == NULL)
 		{
 			/* If memory allocation fails for a row, */
@@ -36,10 +36,11 @@ int **alloc_grid(int width, int height)
 
 		for (j = 0; j < width; j++)
 		{
-			grid[j] = malloc(sizeof(width));
+			grid[j] = malloc(width * sizeof(int));
 			if (grid[j] == NULL)
 			{
 				free(grid[j]);
+				free(grid);
 				return (NULL);
 			}
 			grid[i][j] = 0;

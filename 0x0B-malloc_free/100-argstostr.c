@@ -35,8 +35,9 @@ char *argstostr(int ac, char **av)
 		}
 		new_str[k++] = '\n';
 
-		if (i < ac - 1)
+	/*	if (i < ac - 1)
 			new_str[k++] = ' ';
+	*/
 	}
 
 	new_str[k] = '\0';

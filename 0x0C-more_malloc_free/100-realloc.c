@@ -2,13 +2,15 @@
 
 /**
  * _realloc - reallocates a memory block using malloc and free
- * @ptr: The element to be resized with realloc.
- * @old_size: The preview size of ptr.
- * @new_size: The new_size.
+ * @ptr: is a pointer to the memory previously allocated with a call to malloc
+ * @old_size:  is the size, in bytes, of the allocated space for ptr.
+ * @new_size: The new_size, in bytes of the new memory block.
  * Return: A pointer to the new_resized memory.
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
+	void * new_ptr;
+
 	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
@@ -17,15 +19,18 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	if (ptr == NULL)
 	{
-		ptr = malloc(new_size);
-		if (ptr == NULL)
+		new_ptr = malloc(new_size);
+		if (new_ptr == NULL)
 			return (NULL);
 	}
-	if (new_size == old_size)
+	else if (new_size <= old_size)
 		return (ptr);
-
-	ptr = realloc(ptr, new_size);
-	if (ptr == NULL)
-		return (NULL);
-	return (ptr);
+	else
+	{
+		new_ptr = realloc(ptr, new_size);
+		if (new_ptr == NULL)
+			return (NULL);
+	}
+	return (new_ptr);
+	
 }

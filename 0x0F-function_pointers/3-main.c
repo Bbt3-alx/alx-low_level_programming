@@ -12,9 +12,6 @@ int main(int argc, char *argv[])
 	int num1, num2, result = 0;
 	int (*operation)(int, int);
 
-	/* Convert the command-line arguments to integers using atoi */
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[3]);
 
 	/* check if the number of command-line arguments is valid (4 arguments */
 	if (argc != 4)
@@ -22,6 +19,10 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
+	
+	/* Convert the command-line arguments to integers using atoi */
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
 
 	if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%")
 				== 0) && (num1 == 0 || num2 == 0))

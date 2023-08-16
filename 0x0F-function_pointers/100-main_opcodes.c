@@ -11,6 +11,7 @@ int main(int argc, char **argv)
 {
 	int i, n;
 	unsigned char *p;
+
 	p = (unsigned char *)main;
 
 	if (argc != 2)

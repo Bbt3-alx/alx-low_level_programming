@@ -7,7 +7,8 @@
 void print_binary(unsigned long int n)
 {
 	int i, bitCount = sizeof(n) * 8;
-	unsigned int mask = 1 << (bitCount - 1);
+	unsigned long int mask = 1UL << (bitCount - 1);
+	int skip = 1;
 
 	if (n == 0)
 		_putchar('0');
@@ -16,9 +17,13 @@ void print_binary(unsigned long int n)
 		for (i = 0; i < bitCount; i++)
 		{
 			if (n & mask)
+			{
 				_putchar('1');
-			else
+				skip = 0;
+			}
+			else if (!skip)	
 				_putchar('0');
+
 			mask >>= 1;
 		}
 	}

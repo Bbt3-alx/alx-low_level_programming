@@ -14,7 +14,7 @@ void copyFile(int source_file, int destination_file, char *buffer,
 	ssize_t bytes_read, bytes_write;
 
 	do {
-		bytes_read = read(source_file, buffer, sizeof(buffer));
+		bytes_read = read(source_file, buffer, BUFFER_SIZE);
 		if (bytes_read == -1)
 		{
 			fprintf(stderr, "Error: Can't read from file %s\n", file1);

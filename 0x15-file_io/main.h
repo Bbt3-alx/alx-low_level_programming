@@ -1,5 +1,12 @@
 #ifndef LIST_H
 #define LIST_H
+#define BUFFER_SIZE 1024
+#define PERMISSIONS 0664
+#define USAGE_ERROR 97
+#define READ_ERROR 98
+#define WRITE_ERROR 99
+#define CLOSE_ERROR 100
+
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>

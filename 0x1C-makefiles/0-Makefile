@@ -1,2 +1,11 @@
-all:
-	gcc $(wildcard *.c) -o school
+EXECUTABLE := school
+all: $(EXECUTABLE)
+
+$(EXECUTABLE): main.o
+	$(CC) -o $(EXECUTABLE) main.o
+
+main.o: main.c
+	$(CC) -c main.c
+
+clean:
+	rm -f $(EXECUTABLE) *.o

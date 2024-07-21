@@ -8,31 +8,23 @@
 int main(void)
 {
 	int x, y, z;
-	int fix_y = '1';
-	int fix_z = '2';
 
-	for (x = '0'; x < '9'; x++)
+	for (x = 0; x <= 7; x++)
 	{
-		for (y = fix_y; y < '9'; y++)
+		for (y = x; y <= 8; y++)
 		{
-			for (z = fix_z; z <= '9'; z++)
+			for (z = y; z <= 9; z++)
 			{
-				if (x != y && y != z && z != x)
+				putchar(x + '0');
+				putchar(y + '0');
+				putchar(z + '0');
+				if (x != 7 || y != 8 || z != 9)
 				{
-					putchar(x);
-					putchar(y);
-					putchar(z);
 					putchar(',');
 					putchar(' ');
 				}
-				else
-				{
-					continue;
-				}
 			}
 		}
-		fix_z++;
-		fix_y++;
 	}
 	putchar('\n');
 	return (0);
